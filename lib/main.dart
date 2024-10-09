@@ -4,10 +4,20 @@ import 'services/pixabay_service.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 void main() {
-  runApp(MyApp());
+  // const firebaseConfig = {
+  //   "apiKey": "AIzaSyCMpWmAym-Op_hbKrQULm7dqmT1zPJSlzU",
+  //   "authDomain": "pixabay-906c0.firebaseapp.com",
+  //   projectId: "pixabay-906c0",
+  //   storageBucket: "pixabay-906c0.appspot.com",
+  //   messagingSenderId: "762212660790",
+  //   appId: "1:762212660790:web:75405d480847a6679c4a97"
+  // };
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -65,7 +75,7 @@ class _ImageGalleryScreenState extends State<ImageGalleryScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Pixabay Gallery'),
+        title: const Text('Pixabay Gallery'),
       ),
       body: _buildBody(),
     );
@@ -79,7 +89,7 @@ class _ImageGalleryScreenState extends State<ImageGalleryScreen> {
             _calculateCrossAxisCount(context));
 
     if (_isLoading && _images.isEmpty) {
-      return Center(child: CircularProgressIndicator());
+      return const Center(child: CircularProgressIndicator());
     } else {
       return Column(
         children: [
@@ -99,7 +109,7 @@ class _ImageGalleryScreenState extends State<ImageGalleryScreen> {
               ),
             ),
           ),
-          if (_isLoading) CircularProgressIndicator(),
+          if (_isLoading) const CircularProgressIndicator(),
         ],
       );
     }

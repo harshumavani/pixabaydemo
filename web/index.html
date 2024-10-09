@@ -41,6 +41,23 @@
 </head>
 <body>
   <script>
+ // Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyCMpWmAym-Op_hbKrQULm7dqmT1zPJSlzU",
+  authDomain: "pixabay-906c0.firebaseapp.com",
+  projectId: "pixabay-906c0",
+  storageBucket: "pixabay-906c0.appspot.com",
+  messagingSenderId: "762212660790",
+  appId: "1:762212660790:web:75405d480847a6679c4a97"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
     window.addEventListener('load', function(ev) {
       // Download main.dart.js
       _flutter.loader.loadEntrypoint({
